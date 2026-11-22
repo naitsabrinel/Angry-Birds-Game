@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #dceeff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+#gameContainer {
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    background-color: #e8f4ff;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+#restart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 12px 28px;
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+
+    background: linear-gradient(180deg, #ff6b4a 0%, #d62f1a 100%);
+    border: 3px solid #8f1d0f;
+    border-radius: 999px;
+    box-shadow: 0 5px 0 #8f1d0f, 0 8px 14px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s, filter 0.15s;
+}
+
+#restart::before {
+    content: "\21BB";       
+    font-size: 22px;
+    line-height: 1;
+}
+
+#restart:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #8f1d0f, 0 12px 18px rgba(0, 0, 0, 0.3);
+}
+
+#restart:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #8f1d0f, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#restart:focus-visible {
+    outline: 3px solid #ffd43b;
+    outline-offset: 3px;
+}
